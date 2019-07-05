@@ -1,0 +1,58 @@
+[
+  {
+    "id": "3d7bbde1-2ba3-498a-88ff-be82219c0815",
+    "title": "Car clean up",
+    "description": "vaccum, pick up trash",
+    "status": "available",
+    "assignee": "Nick"
+  },
+  {
+    "id": "54137de0-d2fe-422a-bbc7-bbf0d61fbad0",
+    "title": "Kira's Room",
+    "description": "Remove stickers off the wall",
+    "status": "available",
+    "assignee": null
+  },
+  {
+    "id": "b32b9f57-f341-48d5-adc8-84c84db9e691",
+    "title": "Pull weeds",
+    "description": "Back yard patio",
+    "status": "assigned",
+    "assignee": "Liz"
+  },
+  {
+    "id": "03881f84-61bf-4a42-8e57-f921c7b6292e",
+    "title": "carpet stains",
+    "description": "carpet clean",
+    "status": "assigned",
+    "assignee": "Nick"
+  },
+  {
+    "id": "a24630f3-3cee-44e0-9317-ec8a56db7d48",
+    "title": "test",
+    "description": "adescriptions",
+    "status": "finished",
+    "assignee": "clari"
+  },
+  {
+    "id": "a961523c-54d6-4583-a1e1-427bc3ff698e",
+    "title": "Clean Dog cage",
+    "description": "Scrub the walls",
+    "status": "available",
+    "assignee": "Liz"
+  },
+  {
+    "id": "888c48b5-bd34-4459-89f5-4178ca923b82",
+    "title": "Arya's Room",
+    "description": "Pick up toys, make her bed",
+    "status": "assigned",
+    "assignee": "Liz"
+  },
+  {
+    "id": "12acc4d9-f1b4-4f26-aac2-f7cfb9f139fb",
+    "title": "Clean Dog cage",
+    "description": "Scrub the walls",
+    "status": "available",
+    "assignee": "Liz"
+  }
+]
