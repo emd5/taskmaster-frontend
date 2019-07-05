@@ -4,7 +4,7 @@ import './app.scss';
 import mockData from './mock.json';
 console.log(mockData);
 
-const allTasksAPI = 'http://taskmaster-app.us-west-2.elasticbeanstalk.com/tasks';
+const allTasksAPI = 'https://taskmaster-app.us-west-2.elasticbeanstalk.com/tasks';
 
 function Task(){
 
@@ -26,7 +26,7 @@ function Task(){
             <div>All Task</div>
             <div>
             <ul>
-                  {task.map( (oneTask) =>
+                  { task.map( (oneTask) =>
                     <li key={oneTask.id}>
                       <details>
                         <summary>
