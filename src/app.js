@@ -4,19 +4,21 @@ import './app.scss';
 import mockData from './mock.json';
 console.log(mockData);
 
-const allTasksAPI = 'https://taskmaster-app.us-west-2.elasticbeanstalk.com/tasks';
+const allTasksAPI = 'http://taskmaster-app.us-west-2.elasticbeanstalk.com/tasks';
 
 function Task(){
 
     const [task , setTasks] = useState([]);
 
     const _getTasks = () => {
+        {/*setTasks(mockData);*/}
         fetch( allTasksAPI, {
             mode:'cors',
+            method: 'GET',
         })
         .then( data => data.json() )
         .then( task => setTasks(task) )
-        .catch( console.error );
+//        .catch( console.error );
     };
 
     useEffect(_getTasks, []);
