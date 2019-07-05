@@ -4,74 +4,51 @@ import './app.scss';
 import mockData from './mock.json';
 console.log(mockData);
 
-const allTasksAPI = 'http://taskmaster-app.us-west-2.elasticbeanstalk.com/tasks';
+const API = 'http://taskmaster-app.us-west-2.elasticbeanstalk.com/tasks';
 
 function Task(){
+    const [task, setTask] = useState( [] );
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
-    const [task , setTasks] = useState([]);
+    const _getTask = () => {
+        fetch( proxyurl + API)
+        .then(data => data.json() )
+        .then( task => setTask(task) )
+        .catch( console.error );
+    }
 
-    const _getTasks = () => {
-        {/*setTasks(mockData);*/}
-        fetch( allTasksAPI, {
-            mode:'cors',
-            method: 'GET',
-        })
-        .then( data => data.json() )
-        .then( task => setTasks(task) )
-//        .catch( console.error );
-    };
-
-    useEffect(_getTasks, []);
+    useEffect(_getTask, []);
 
     return(
-        <>
-            <div>All Task</div>
-            <div>
-            <ul>
-                  { task.map( (oneTask) =>
-                    <li key={oneTask.id}>
-                      <details>
-                        <summary>
-                          <span>{oneTask.title}</span>
-                          <span>{oneTask.description}</span>
+    <>
+        <div>All Task</div>
 
-                        </summary>
-                        {/*<Description description={oneTask.description} />*/}
-                      </details>
-                    </li>
-                  )}
-                </ul>
-             </div>
-         </>
+        <ul>
+          { task.map( (oneTask) =>
+            <li key={oneTask.id}>
+              <details>
+                <summary>
+                  <p>{oneTask.title}</p>
+                  <p>{oneTask.description}</p>
+
+                </summary>
+              </details>
+            </li>
+          )}
+         </ul>
+   </>
     )
 }
 
-{/*function Description(props){
-let description = props.description || [];
-    return(
-        <section>
-            {description.map( (item, idx) =>
-                <div>
-                    <span>{item.}
-                </div>
-            )}
-        </section>
-    )
-
-}*/}
-
-
-
 function App() {
   return (
-    <>
-        <header>Taskmaster</header>
+    <div className="App">
+        <header> Taskmaster </header>
         <main>
-          {/* <Description />*/}
-        <Task />
+            <Task />
         </main>
         <footer> &copy; 2019 Liz Mahoney</footer>
-    </>
+    </div>
   );
 }
 
