@@ -4,20 +4,24 @@ import './app.scss';
 import mockData from './mock.json';
 console.log(mockData);
 
-const API = 'http://taskmaster-app.us-west-2.elasticbeanstalk.com/tasks';
+const API = 'http://taskmaster-app-dev.us-west-2.elasticbeanstalk.com/tasks';
 
 function Task(){
-    const [task, setTask] = useState( [] );
+
+    const [task, setTasks] = useState( [] );
+
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
-    const _getTask = () => {
+    const _getTasks = () => {
+        // setTasks(mockData)
+        // fetch from api
         fetch( proxyurl + API)
-        .then(data => data.json() )
-        .then( task => setTask(task) )
-        .catch( console.error );
-    }
+        .then( data => data.json() )
+        .then( allTasks => setTasks(allTasks) )
+        .catch( console.error);
+      };
 
-    useEffect(_getTask, []);
+    useEffect(_getTasks, []);
 
     return(
     <>
@@ -42,7 +46,7 @@ function Task(){
 
 function App() {
   return (
-    <div className="App">
+    <div>
         <header> Taskmaster </header>
         <main>
             <Task />
