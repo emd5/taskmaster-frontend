@@ -8,9 +8,9 @@ Liz Mahoney
 
 ## Deployed Link
 
-Frontend - https://master.d1jtrudvm33jy.amplifyapp.com/
+Frontend - https://master.d1abu7pwsmv6f1.amplifyapp.com/
 
-Backend - http://taskmaster-app.us-west-2.elasticbeanstalk.com/tasks
+Backend - http://taskmaster-app-dev.us-west-2.elasticbeanstalk.com/tasks
 
 Taskmaster Backend Github Repo - https://github.com/emd5/taskmaster
 
