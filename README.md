@@ -27,12 +27,12 @@ Taskmaster Backend Github Repo - https://github.com/emd5/taskmaster
 
 - Run `npm i node-sass`
 
-*** Run the application***
+***Run the application***
 `npm start`
 
-*** Create a production build ***
+***Create a production build***
 `npm run build`
 
-*** Deploy static files to s3***
+***Deploy static files to s3***
 `npm run deploy`
 
