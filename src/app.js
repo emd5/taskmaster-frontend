@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import './app.scss';
 
 import mockData from './mock.json';
-console.log(mockData);
 
 const API = 'http://taskmaster-app-dev.us-west-2.elasticbeanstalk.com/tasks';
 
@@ -13,7 +12,7 @@ function Task(){
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
     const _getTasks = () => {
-        // setTasks(mockData)
+         setTasks(mockData)
         // fetch from api
         fetch( proxyurl + API)
         .then( data => data.json() )
