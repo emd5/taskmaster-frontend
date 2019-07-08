@@ -26,7 +26,7 @@ function Task(){
 
         fetch(`${proxyurl}${API}/${id}/state`, {
             mode: 'cors',
-            method: 'PATCH'
+            method: 'PUT'
         })
         .then( data => data.json() )
         .then( singleTask => {
