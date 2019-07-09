@@ -31,7 +31,6 @@ function Task(){
         .then( data => data.json() )
         .then( singleTask => {
             setTasks( task.map( (entry) => {
-//                console.log(entry.id);
                 return entry.id === id ? singleTask : entry;
                 }
             ));
@@ -53,6 +52,13 @@ function Task(){
                   <p>{oneTask.title} | Assignee: {oneTask.assignee}</p>
                   <p>Status: <span id={oneTask.id} onClick={_toggleStatus}>{oneTask.status.toString()}</span>
                   </p>
+                  <form action={`${API}/${oneTask.id}/images`} method="post" encType="multipart/form-data">
+                      <label>
+                        <span>Upload Image</span>
+                        <input name="file" type="file" />
+                      </label>
+                      <button>Save</button>
+                   </form>
 
                 </summary>
                 <Description description={oneTask.description} />
@@ -71,7 +77,9 @@ function Description(props){
         <section>
             <>
                 <p>Description: <span>{description}</span></p>
+
             </>
+
         </section>
 
 
