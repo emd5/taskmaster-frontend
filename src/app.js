@@ -49,6 +49,7 @@ function Task(){
             <li key={oneTask.id}>
               <details>
                 <summary>
+                {oneTask.imageUrl ? (<img src={oneTask.imageUrl} height="100px" width="100px"/>) : (<p>No Image</p>)}
                   <p>{oneTask.title} | Assignee: {oneTask.assignee}</p>
                   <p>Status: <span id={oneTask.id} onClick={_toggleStatus}>{oneTask.status.toString()}</span>
                   </p>
