@@ -36,3 +36,10 @@ Taskmaster Backend Github Repo - https://github.com/emd5/taskmaster
 ***Deploy static files to s3***
 `npm run deploy`
 
+# Features
+***7/10/19***
+- [x] Resize image and have it display next to original image
+
+## Resources 
+Set up Lambda - https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html
+

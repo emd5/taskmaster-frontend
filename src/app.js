@@ -4,6 +4,7 @@ import './app.scss';
 import mockData from './mock.json';
 
 const API = 'http://taskmaster-app-dev.us-west-2.elasticbeanstalk.com/tasks';
+//const API = 'http://localhost:5000/tasks';
 
 function Task(){
 
@@ -49,7 +50,12 @@ function Task(){
             <li key={oneTask.id}>
               <details>
                 <summary>
-                {oneTask.imageUrl ? (<img src={oneTask.imageUrl} height="100px" width="100px"/>) : (<p>No Image</p>)}
+                {oneTask.imageUrl ? (<img src={oneTask.imageUrl} height="100px" width="100px"/>
+                                    ) : (<p>No Image</p>)}
+                {oneTask.thumbnailImageUrl ? (<img class="thumbnail" src={oneTask.thumbnailImageUrl}/>
+                                           ) : (<p>No Image</p>)}
+
+
                   <p>{oneTask.title} | Assignee: {oneTask.assignee}</p>
                   <p>Status: <span id={oneTask.id} onClick={_toggleStatus}>{oneTask.status.toString()}</span>
                   </p>
