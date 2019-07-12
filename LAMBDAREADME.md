@@ -17,13 +17,13 @@ Target the event to the `resizeJs` lambda function.
 ![Cloud Watch Create rule](src/assets/cloudwatchCreateRulePage.png)
 
 
-Once the event is created you sHould see the following page:
+Once the event is created you should see the following page:
 
 ![Cloud Watch Rules](src/assets/cloudwatchRules.png)
 
 Go to the resizeJs Lambda console and scroll until you see CloudWatch Events to confirm it is attached:
 
-![Warmer Attached](src/assets/warmerAttached.png)
+![Warmer Attached](src/assets/warmerAttach.png)
 
 Create a new lambda function to test the lambda warmer that was created. (the instructions is in the tutorial)
 
